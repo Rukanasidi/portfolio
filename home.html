@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>Rukayya Nasidi's Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Rukayya</div>
+            <nav class="top-nav">
+                <ul>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <!-- <a href="transcript.html">TRANSCRIPT</a> -->
+                <!-- <a href="certificates.html">CERTIFICATES</a> -->
+                <!-- <li><a href="socials.html">SOCIALS</a></li> -->
+                </ul>  
+            </nav>
+            <div class="header-social-icons">
+                <a href="www.linkedin.com/in/rukayya-nasidi-1359771a4" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter Profile"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+            </div>
+        </header>
+        <main>
+        <section class="main-section">
+           <div  class="main-content">
+                <p>Welcome!</p>
+                <h1>Hi, I'm Rukayya</h1>
+                <h2>Intern </h2>
+                <h3>I’m a third-year Cybersecurity student with a passion 
+                    <br>to learn and a passion to secure systems and data. </h3>
+            </div>
+            <div class="heroimage">
+                <img src="ruky.jpg" alt="Rukayya">
+            </div>
+        </section>
+        </main>
+        <section class="about" id="about">
+            <h1>About Me</h1>
+            <div class="about-content">
+            <img src="IMG-20241224-WA0071.jpg" alt="Rukayyaphoto">
+                <div class="about-details">
+                <p>I'm currently expanding my skill set via a full-stack development internship, though my primary focus is cybersecurity. 
+                I applied for the fullstack internship because i want to understand the technologies I’ll one day protect. The fullstack internship 
+                gave me an opportunity to gain hands-on experience building, deploying, and scaling web applications.
+                Our academic curriculum gave to us an introduction to full-stack development at a very rapid pace. I sought the internship to fortify these skills outside 
+                the classroom.I believe having a more well-rounded background in technical fields would make me a cybersecurity professional who is effective. 
+                This background would allow for me understand systems from all sides.
+                <!-- Whether I write secure backend code or analyze threats, my goal remains the same: 
+                to build as well as protect with clarity, precision, and purpose.
+                I want to continue building my frontend and backend skills and knowledge while becoming a security analyst.</p>
+                -->  
+
+                <div class="dropdown">
+                        <div class="dropdown-tabs">
+                            <button class="tab-button active" data-tab="experience">Experience</button>
+                            <button class="tab-button" data-tab="certificates">Certificates</button>
+                            <button class="tab-button" data-tab="transcripts">Transcripts</button>
+                            <button class="tab-button" data-tab="education">Education</button>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="tab-content active" id="experience">
+                                <p>Your experience content goes here...</p>
+                            </div>
+                            <div class="tab-content" id="certificates">
+                                <p>Your certificates content goes here...</p>
+                            </div>
+                            <div class="tab-content" id="transcripts">
+                                <p>Your transcripts content goes here...</p>
+                            </div>
+                            <div class="tab-content" id="education">
+                                <p>Your education content goes here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+        </script>
+        
+    </body>
+</html>
